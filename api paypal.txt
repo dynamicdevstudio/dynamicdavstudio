@@ -1,0 +1,23 @@
+Identifiants API----- sand box
+
+Clé API :
+AZvtiy3CQct6eMQNi_U8XuOflVw9xFT_RPuCW7tCwjUxN6IJwRjOGmKzls5rsjDsfVhLncdvjv4PBH7l
+
+Clé secrète :
+EIfM5G28ndk_IEbCRhA3JgCSVzvjjDXAavZu_H7Wy4OoY4BVDZrQvH7vMmf_WcdlzR8V4Zz1WN9lB0X_
+
+live----
+
+Clé API :
+AU4TdDHdzLWkjM8fAfC2gjsUEMMMGQwJKKbRuskOTZ_63PvT2R5EXQJdHjPyM6FEbz3it5LTySTRcwSC
+
+Clé secrète :
+EIAaHdlkWcXO8PBDswYFIitBwztDiWLeX6Xf4NRHDhYLBLp8cojOLGoOerbJPMqdr08-pV9JlQ1AhmbT
+
+Identifiants d'environnement de test
+
+Nom d'utilisateur :
+sb-6adbe27265271@business.example.com
+
+Mot de passe :
+9XprU7<4

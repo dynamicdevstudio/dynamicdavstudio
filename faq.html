@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="matrix-style.css">
+    <title>FAQ - DynamicDevStudio</title>
+    <link rel="icon" href="En-tête.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        header {
+            /* Votre style pour l'en-tête */
+        }
+
+        main {
+            max-width: 90%;
+            margin: 1% auto;
+        }
+
+        .faq-container {
+            background-color: #0f386d7e;
+            padding: 1%;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item {
+            margin-top: 20px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0.5em;
+            border-radius: 5px;
+            transition: background 0.3s;
+            background: #0f386d7e;
+            color: #fff;
+        }
+
+        .faq-question:hover {
+            background: #0b2f72a2;
+        }
+
+        .faq-answer {
+            margin-top: 10px;
+            display: none;
+            padding: 0.5em;
+            border-radius: 5px;
+            background: #0f386d7e;
+            color: #fff;
+        }
+
+        footer {
+            background: #0f386d7e;
+            padding: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Logo.svg" alt="Description du logo" id="logo">
+            </a>
+        </div>
+        
+        
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <div class="overlay"></div>
+    
+        <nav class="nav-list">
+            <div class="close" id="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="services2.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <center>
+        <main>
+    <div class="faq-container">
+        <h1>Foire aux questions (FAQ)</h1>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                Q: Qu'est-ce que DynamicDevStudio ?
+            </div>
+            <div class="faq-answer">
+                R: DynamicDevStudio est une entreprise spécialisée dans le développement web, la création d'applications mobiles et la transformation numérique.
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                Q: Comment débuter un projet avec vous ?
+            </div>
+            <div class="faq-answer">
+                R: Pour commencer un projet, contactez-nous via notre page de contact. Notre équipe vous répondra sous 48h pour discuter de vos besoins. ou visitez notre page de Services.
+            </div>
+        </div>
+    
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                Q: Quels sont vos tarifs ?
+            </div>
+            <div class="faq-answer">
+                R: Nos tarifs varient en fonction de la complexité et de la taille du projet. Pour obtenir un devis précis, veuillez nous fournir autant de détails que possible sur votre projet.
+            </div>
+
+        <!-- ... autres questions/réponses ... -->
+            <!-- ... (votre code précédent) ... -->
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Proposez-vous des services après-vente ?
+    </div>
+    <div class="faq-answer">
+        R: Oui, nous offrons une assistance continue après la finalisation de chaque projet.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Combien de temps prend généralement un projet ?
+    </div>
+    <div class="faq-answer">
+        R: Cela dépend de la complexité du projet, mais généralement entre 1 à 3 semaines.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Quels sont vos modes de paiement acceptés ?
+    </div>
+    <div class="faq-answer">
+        R: Nous acceptons les cartes de crédit et PayPal.
+    </div>
+</div>
+
+<!-- ... continuez d'ajouter plus de questions/réponses ... -->
+
+<!-- ... (votre code suivant) ... -->
+    <!-- ... (questions précédentes) ... -->
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Comment pouvons-nous suivre la progression du projet ?
+    </div>
+    <div class="faq-answer">
+        R: Nous fournissons un accès à un tableau de bord de projet où vous pouvez suivre les mises à jour en temps réel.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Offrez-vous une garantie pour votre travail ?
+    </div>
+    <div class="faq-answer">
+        R: Oui, tous nos projets viennent avec une garantie de 1 mois pour les bugs et problèmes techniques.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Pouvez-vous refondre mon site existant ?
+    </div>
+    <div class="faq-answer">
+        R: Absolument ! Nous pouvons moderniser et améliorer les sites existants pour les rendre plus actuels.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Est-ce que je posséderai mon site une fois qu'il sera terminé ?
+    </div>
+    <div class="faq-answer">
+        R: Oui, une fois le projet terminé et payé, vous en possédez les droits complets.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Est-ce que vous fournissez l'hébergement web ?
+    </div>
+    <div class="faq-answer">
+        R: Non, mais nous pouvons recommander des fournisseurs d'hébergement fiables.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Proposez-vous des solutions e-commerce ?
+    </div>
+    <div class="faq-answer">
+        R: Oui, nous créons des solutions e-commerce sur mesure selon les besoins des clients.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Combien coûte un projet typique ?
+    </div>
+    <div class="faq-answer">
+        R: Le coût varie en fonction de la complexité et de la taille. Contactez-nous pour un devis.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Puis-je obtenir une formation pour gérer mon site ?
+    </div>
+    <div class="faq-answer">
+        R: Oui, nous offrons des sessions de formation pour vous aider à gérer et mettre à jour votre site.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Quelles technologies utilisez-vous pour le développement ?
+    </div>
+    <div class="faq-answer">
+        R: Nous utilisons une variété de technologies, notamment HTML, CSS, JavaScript, PHP et d'autres frameworks selon les besoins du projet.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Est-ce que mon site sera mobile-friendly ?
+    </div>
+    <div class="faq-answer">
+        R: Absolument ! Tous les sites que nous développons sont adaptés pour les mobiles.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Combien de temps mon site sera-t-il en ligne ?
+    </div>
+    <div class="faq-answer">
+        R: Une fois développé, votre site restera en ligne aussi longtemps que vous le souhaiterez.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Fournissez-vous des services de référencement (SEO) ?
+    </div>
+    <div class="faq-answer">
+        R: Oui, nous offrons des services SEO pour améliorer la visibilité de votre site sur les moteurs de recherche.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Comment puis-je vous contacter pour une assistance ?
+    </div>
+    <div class="faq-answer">
+        R: Vous pouvez nous contacter par e-mail, téléphone ou via notre page de contact sur notre site.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Offrez-vous des remises pour les projets à long terme ?
+    </div>
+    <div class="faq-answer">
+        R: Oui, nous offrons des remises pour les clients à long terme ou les grands projets.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Mon site sera-t-il sécurisé ?
+    </div>
+    <div class="faq-answer">
+        R: La sécurité est une priorité pour nous. Nous mettons en œuvre des mesures de sécurité pour protéger votre site contre les menaces potentielles.
+    </div>
+</div>
+
+<div class="faq-item">
+    <div class="faq-question" onclick="toggleAnswer(this)">
+        Q: Puis-je avoir des retours ou des témoignages de vos clients précédents ?
+    </div>
+    <div class="faq-answer">
+        R: Bien sûr ! Nous pouvons fournir des témoignages ou vous mettre en contact avec certains de nos clients précédents.
+    </div>
+</div>
+
+<!-- ... (votre code suivant) ... -->
+
+    </div>
+</center>
+    <footer>
+       - DynamicDavStudio - Copyright - © 2023
+    </footer>
+    <script>
+        function toggleAnswer(element) {
+            let answer = element.nextElementSibling;
+            if (answer.style.display === "none") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+ <script src="matrix-script.js"></script>
+</body>
+ <script src="matrix-script.js"></script>  <link rel="icon" href="En-tête.png" type="image/x-icon">
+</html>

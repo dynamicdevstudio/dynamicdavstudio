@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets Web - DynamicDavStudio</title>
+    <link rel="stylesheet" href="matrix-style.css">
+    <link rel="icon" href="En-tête.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;      
+          }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            border-bottom: 3px solid #007BFF;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .project-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; 
+        }
+
+        .project-item {
+            flex: 0 0 calc(30.33% - 20px);
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #fdfdfd;
+            transition: transform 0.3s;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-link {
+            display: block;
+            font-size: 1.2em;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Logo.svg" alt="Description du logo" id="logo">
+            </a>
+        </div>
+        
+        
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <div class="overlay"></div>
+    
+        <nav class="nav-list">
+            <div class="close" id="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="services2.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <center>
+<main>
+    <div class="container">
+        <h2>Mes Projets Web</h2>
+        <ul class="project-list">
+            <li class="project-item">
+                <a class="project-link" href="https://nassimsimon48.wixsite.com/shop-in-one" target="_blank"> Magsain E-commerce </a>
+            </li>
+            <li class="project-item">
+                <a class="project-link" href="https://nassimsimon48.wixsite.com/info-tech" target="_blank">SIte tech</a>
+            </li>
+            <li class="project-item">
+                <a class="project-link" href="https://nassimsimon48.wixsite.com/coleprimairedouma" target="_blank">ecole praimaire</a>
+            <li class="project-item">
+                <a class="project-link" href="https://nassimsimon48.wixsite.com/blogcreationetart" target="_blank">Blog de creation et art</a>
+            </li>
+            <li class="project-item">
+                <a class="project-link" href="https://nassimsimon48.wixsite.com/le-portfolio-de-benj" target="_blank">Port folio</a>
+            </li>
+            <li class="project-item">
+                <a class="project-link" href="https://nassimsimon48.wixsite.com/fitpro" target="_blank">Site Fitness</a>
+            </li>
+            <!-- Ajouter d'autres projets selon le besoin -->
+        </ul>
+    </div>
+</main>
+</center>
+<footer>
+    DynamicDavStudio © 2023. Tous droits réservés.
+</footer>
+
+</body>
+ <script src="matrix-script.js"></script> 
+  
+</html>

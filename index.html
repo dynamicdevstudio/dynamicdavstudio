@@ -1,0 +1,317 @@
+<!-- Modified HTML with added CSS and animations -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynamicDavStudio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="matrix-style.css">
+    <link rel="icon" href="En-tête.png" type="image/x-icon">
+</head>
+
+<style>
+    
+body {
+    font-family: var(--body-font);
+    color: var(--secondary);
+    line-height: 1.6;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h1, h2, h3 {
+    color: var(--primary);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary);
+    transition: all 0.3s;
+  }
+  
+  section {
+    padding: 80px 0; 
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    text-decoration: none;  
+    background: var(--primary);
+    color: #fff;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: #0062cc;
+  }
+  
+  /* Header */
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .nav-link {
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: var(--secondary); 
+  }
+  
+  /* Hero Section */
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center; 
+    size-adjust: 800px; 
+  }
+  
+  .hero-text {
+    flex: 3; 
+  }
+  
+  .hero-image {
+    flex: 2;
+  }
+  
+  /* Services */
+  
+  .services {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .service {
+    flex: 1;
+  }
+  
+  /* About */ 
+  
+  .about-us {
+    display: flex;
+    gap: 200px;
+  }
+  
+
+  
+  .about-text {
+    flex: 31;
+  }
+  
+  /* Contact Form */
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form input, 
+  .contact-form textarea {
+    padding: 15px 10px;
+    margin-bottom: 1em; 
+    border-radius: 4px;
+    border: 1px solid var(--secondary);
+  }
+  
+  .contact-form textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+  /* Footer */
+  
+  .copyright {
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f5;
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 768px) {
+  
+    .hero,
+    .about-us,
+    .services {
+      flex-direction: column;
+    }
+  
+    .navbar-list {
+      flex-direction: column;
+    }
+  
+  }
+</style>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Logo.svg" alt="Description du logo" id="logo">
+            </a>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="overlay"></div>
+
+        <nav class="nav-list">
+            <div class="close" id="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="services2.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+            <div class="container">
+<center>
+                <div class="hero-text">
+                  <h1>Donnez vie à votre vision digitale</h1>
+                  <p>Chez DynamicDevStudio, nous créons des expériences digitales uniques qui propulsent vos projets au-delà des étoiles.</p>
+                  <a href="about.html" class="btn">En Savoir Plus</a>
+                </div>
+            </center>
+                
+          
+              </div>
+          
+            </section>
+          <center>
+            <section id="services">
+          
+              <div class="container">
+          
+                <h2 class="section-title">Nos services</h2>
+          
+                <div class="services">
+          
+                  <div class="service">
+                    <h3>Développement Web</h3>
+                    <p>"Chez DynamicDevStudio, le développement web est une passion qui donne vie à vos idées avec émotion. Chaque ligne de code est une symphonie, chaque site une expérience captivante. Embarquez avec nous pour sculpter ensemble votre identité numérique."</p>
+                  </div>
+          
+                  <div class="service">
+                    <h3>Montage Video</h3>
+                    <p> "Le montage vidéo chez DynamicDevStudio transcende la simple édition pour devenir une chorégraphie émotionnelle. Chaque coupe, chaque transition est un pas vers la création d'une œuvre cinématographique qui touche les cœurs. Avec nous, transformez vos moments en narrations visuelles chargées d'émotions intenses."</p>
+                  </div>
+          
+                  <div class="service">
+                    <h3>Graphique Design</h3>
+                    <p>"Le design graphique chez DynamicDevStudio n'est pas simplement visuel, c'est une fusion d'émotions et d'esthétique. Chaque trait, chaque couleur raconte une histoire, créant une expérience visuelle qui transcende les attentes. Avec nous, donnez vie à vos idées avec une touche artistique profondément émotionnelle."</p>
+                </div>
+
+                  <div class="service">
+                    <h3>Creation E-commenrce</h3>
+                    <p>"La création d'e-commerce chez DynamicDevStudio va au-delà de la simple transaction, c'est l'art de donner vie à des rêves d'entrepreneurs. Chaque clic sur votre site devient une expérience, chaque achat une émotion. Avec nous, transformez votre boutique en ligne en un voyage passionnant où chaque visiteur devient un adepte de votre histoire."</p>
+                </div>
+
+                  <div class="service">
+                    <h3>Creation de Diapo PowerPoint et Rempplissage de Tableux Excel </h3>
+                    <p>"La création de diaporamas PowerPoint chez DynamicDevStudio transcende la simple présentation pour devenir une symphonie visuelle. Chaque diapo est une toile où vos idées prennent vie avec émotion, captivant chaque regard. Et dans le monde des chiffres, remplir les tableaux Excel devient une danse de données orchestrée avec précision, transformant des nombres en une histoire engageante. Avec nous, chaque présentation devient une expérience visuelle et chaque tableau Excel, une narration chiffrée imprégnée d'émotion."</p>
+                </div>
+          
+          
+                </div>
+          
+              </div>
+          
+            </section>
+        </center>
+        <center>
+            <section id="about">
+          
+              <div class="container">
+          
+                <div class="about-us">
+          
+                  <div class="about-image">
+                    <img src="about.jpg" alt="About Us">
+                  </div>
+          
+                  <div class="about-text">
+                    <h2>Une équipe d'experts à votre service</h2>
+                    <p>
+                        "Chez DynamicDevStudio, notre équipe d'experts est bien plus qu'un simple service, c'est une passion dévouée à votre succès. Chaque membre est un artisan de l'excellence, mettant son cœur et son expertise au service de vos projets. Avec nous, vous ne faites pas simplement appel à une équipe, vous embarquez pour un voyage où l'engagement devient une expérience inoubliable, et l'expertise, le pilier de votre réussite."</p>
+                  </div>
+          
+                </div>
+          
+              </div>
+          
+            </section>
+        </center>
+            
+        <section id="portfolio">
+                <!-- Exemples de votre travail ici -->
+                <iframe src="diapo.pdf" width="100%" height="600"></iframe>
+
+<center>
+            <section id="about">
+                <h2>À propos de nous</h2>
+                <p>"Chez DynamicDevStudio, nous faisons bien plus que du simple développement. Nous donnons vie à vos visions numériques. Fondés en 2023, nous sommes devenus un phare pour ceux qui naviguent dans le vaste océan du numérique. Notre équipe d'experts passionnés s'engage à fusionner technologie de pointe et designs innovants pour transformer vos idées en réalités palpitantes. Du développement web à la conception d'applications mobiles, chaque projet bénéficie de notre dévouement, expertise et créativité. Avec DynamicDevStudio, embarquez pour une aventure numérique sans précédent et propulsez vos projets bien au-delà des étoiles."</p>
+                <p>Notre mission est de fournir des solutions de technologie de pointe qui améliorent l'efficacité et la productivité des entreprises.</p>
+            </section>
+          </center>
+            <center>
+          <section id="contact">
+            <h2>Contactez-nous</h2>
+            <p>Pour en savoir plus sur nos services ou pour nous contacter, n'hésitez pas à nous contacter.</p>
+            <a href="contact.html" class="cta-button">Contactez-nous</a>
+        </section>
+      </center>
+            
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>- DynamicDavStudio - Copyright - © 2023</p>
+        </footer>
+        <script src="matrix-script.js"></script>
+
+    </body>
+
+     <script src="matrix-script.js"></script> 
+     <link rel="icon" href="En-tête.png" type="image/x-icon">
+</html>

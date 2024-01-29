@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynamicDevStudio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="matrix-style.css">
+    <link rel="icon" href="En-tête.png" type="image/x-icon">
+    <style>
+       
+     
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <!-- ... -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Logo.svg" alt="Description du logo" id="logo">
+            </a>
+        </div>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="overlay"></div>
+
+        <nav class="nav-list">
+            <div class="close" id="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="services2.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Formulaire de Commande</h2>
+
+        <form action="javascript:void(0);" onsubmit="sendMail();">
+            <!-- Nom et Prénom -->
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <!-- Numéro de téléphone avec indicatif de pays -->
+            <label for="telephone">Téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="Indicatif de pays + Numéro" required>
+
+            <!-- Adresse e-mail -->
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Type de produit -->
+            <label for="typeProduit">Type de Produit :</label>
+            <select id="typeProduit" name="typeProduit" required>
+                <option value="Service de Creation de Site-Web">Service de Creation de Site-Web</option>
+                <option value="Service de Creation de Logo et des Design">Service de Creation de Logo et des Design</option>
+                <option value="Service E-commerce">Service E-commerce</option>
+                <option value="Service de Creation de Presantation PowerPoint et Tableux Excel">Service de Creation de Presantation PowerPoint et Tableux Excel</option>
+                <option value="Service de Montage Video">Service de Montage Video</option>
+            </select>
+
+            <!-- Description de design ou de produit -->
+            <label for="description">Description :</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <!-- Pour quand -->
+            <label for="delaiLivraison">Pour quand avez-vous besoin du produit (dans 1 mois ou plus) ?</label>
+            <select id="delaiLivraison" name="delaiLivraison" required>
+                <option value="1mois">Dans 1 mois</option>
+                <option value="plus_de_1_mois">Plus d'un mois</option>
+            </select>
+
+            <!-- Bouton de soumission -->
+            <button type="submit">Suivant</button>
+        </form>
+    </main>
+
+    <script src="matrix-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        function sendMail() {
+    (function () {
+        emailjs.init("xXPHmKOyd1dzN0n13"); // Account Public Key
+    })();
+
+    var params = {
+        nom: document.querySelector("#nom").value,
+        prenom: document.querySelector("#prenom").value,
+        telephone: document.querySelector("#telephone").value,
+        email: document.querySelector("#email").value,
+        typeProduit: document.querySelector("#typeProduit").value,
+        description: document.querySelector("#description").value,
+        delaiLivraison: document.querySelector("#delaiLivraison").value,
+    };
+
+    var serviceID = "service_l2g5yds"; // Email Service ID
+    var templateID = "template_xsawfnc"; // Email Template ID
+
+    emailjs.send(serviceID, templateID, params)
+        .then(res => {
+            alert("Email sent successfully!!");
+            
+            // Redirection en fonction du type de produit sélectionné
+            var typeProduit = document.querySelector("#typeProduit").value;
+            switch (typeProduit) {
+                case "Service de Creation de Site-Web":
+                    window.location.href = "payment site.html";
+                    break;
+                case "Service de Creation de Logo et des Design":
+                    window.location.href = "payment logo.html";
+                    break;
+                case "Service E-commerce":
+                    window.location.href = "payment ecommenrce.html";
+                    break;
+                case "Service de Creation de Presentation PowerPoint et Tableaux Excel":
+                    window.location.href = "payment office.html";
+                    break;
+                case "Service de Montage Video":
+                    window.location.href = "payment montage.html";
+                    break;
+                default:
+                    // Redirection par défaut si le type de produit n'est pas reconnu
+                    window.location.href = "page_selection.html";
+                    break;
+            }
+        })
+        .catch();
+}
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous | DynamicDavStudio</title>
+    <link rel="stylesheet" href="matrix-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="En-tête.png" type="image/x-icon">
+
+    <style>
+       
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        input[type="name"], 
+        input[type="email"],
+        input[type="number"], 
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0057b3;
+        }
+
+        #social-media-links li {
+            display: inline-block;
+            margin: 0 15px;  /* Espacement entre les icônes */
+        }
+
+        #social-media-links a {
+            color: #00ccff;  /* Couleur initiale des icônes */
+            font-size: 24px;  /* Taille des icônes */
+            transition: color 0.3s;  /* Transition douce de la couleur au survol */
+        }
+
+        #social-media-links a:hover {
+            color: #ff2600;  /* Couleur des icônes au survol */
+        }
+
+
+    </style>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="Logo.svg" alt="Description du logo" id="logo">
+            </a>
+        </div>
+        
+        
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    
+        <div class="overlay"></div>
+    
+        <nav class="nav-list">
+            <div class="close" id="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="services2.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+  
+    <main class="container">
+        <center>
+        <section id="contact-section">
+                <h2>Contactez-nous</h2>
+                <p>Pour toute question ou information, n'hésitez pas à nous contacter via le formulaire ci-dessous ou nos coordonnées.</p>
+
+                <form action="javascript:void(0);" onsubmit="sendMail();">
+
+                <input type="name" name="name" required placeholder="Name">
+                <input type="email" name="email" required placeholder="Email">
+                <input type="number" name="number" placeholder="Phone N°">
+                <textarea name="msg" required placeholder="Message"></textarea>
+
+                <button type="submit">Envoyer</button>
+           </form>
+        </section>
+
+        <section id="social-media-links">
+            <h2>Suivez-nous sur les réseaux sociaux :</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=61550484285888" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/dynamicdavstudio/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/@DynamicDavStudio" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="https://www.t.me/@dynamicdavstudio" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram-plane"></i></a></li>
+                <li><a href="https://wa.me/message/EWXW454DXXHCG1" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+        </section>
+    </center>
+    </main>
+
+    <footer>
+        <p>DynamicDavStudio - © 2023</p>
+    </footer>
+    <script src="matrix-script.js"></script>
+    
+   
+    <script>
+        function sendMail() {
+            // Initialisation de EmailJS avec la clé publique
+            (function () {
+                emailjs.init("xXPHmKOyd1dzN0n13"); // Clé publique du compte
+            })();
+
+            // Récupération des valeurs des champs du formulaire
+            var params = {
+                name: document.querySelector("input[name='name']").value,
+                email: document.querySelector("input[name='email']").value,
+                number: document.querySelector("input[name='number']").value,
+                msg: document.querySelector("textarea[name='msg']").value,
+            };
+
+            var serviceID = "service_l2g5yds"; // ID du service de messagerie
+            var templateID = "template_aavxt6b"; // ID du modèle de messagerie
+
+            // Envoi de l'email
+            emailjs.send(serviceID, templateID, params)
+                .then(res => {
+                    alert("Email envoyé avec succès !!");
+
+                    // Redirection vers index.html après avoir envoyé l'email
+                    window.location.href = "index.html";
+                })
+                .catch();
+        }
+    </script>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+ <script src="matrix-script.js"></script>  
+ <link rel="icon" href="En-tête.png" type="image/x-icon">
+</html>

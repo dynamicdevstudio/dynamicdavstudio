@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services en Ligne - DynamicDavStudio</title>
+    <link rel="stylesheet" href="matrix-style.css">
+    <link rel="icon" href="En-tête.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px; /* Ajout d'un espace entre les boîtes de service */
+            padding: 20px;
+        }
+
+        .service-box {
+            flex: 1 1 calc(33% - 20px); /* Permet de prendre un tiers de l'espace disponible, en déduisant l'espacement */
+            box-shadow: 0 4px 8px rgba(0, 255, 127, 0.3);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            margin-top: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Logo.svg" alt="Description du logo" id="logo">
+        </a>
+    </div>
+    
+    
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="overlay"></div>
+
+    <nav class="nav-list">
+        <div class="close" id="close-menu">
+            <i class="fas fa-times"></i>
+        </div>
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="services2.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <link rel="icon" href="En-tête.png" type="image/x-icon">
+
+</header>
+
+    <div class="container">
+        <div class="service-box">
+            <h2>Service de Creation de Site-Web</h2>
+            <p>Développement d'un site web de base adapté à vos besoins.</p>
+            <p>Prix: 100$</p>
+            <a href="before.html" class="cta-button">Acheter</a>
+            
+        </div>
+
+        <div class="service-box">
+            <h2>Service de Creation de Logo et des Design</h2>
+            <p>Développement d'un Logo Professionnel avec des fonctionnalités avancées.</p>
+            <p>Prix: 80$</p>
+            <a href="before.html" class="cta-button">Acheter</a>
+        </div>
+
+        <div class="service-box">
+            <h2>Service E-commerce</h2>
+            <p>Création d'une boutique en ligne complète avec gestion des produits et paiement en ligne.</p>
+            <p>Prix: 150$</p>
+            <a href="before.html" class="cta-button">Acheter</a>
+        </div>
+
+        <div class="service-box">
+            <h2>Service de Creation de Presantation PowerPoint et Tableux Excel</h2>
+            <p>Création d'une Presantation de Qualite et Professionnel.</p>
+            <p>Prix: 40$</p>
+            <a href="before.html" class="cta-button">Acheter</a>
+        </div>
+
+        <div class="service-box">
+            <h2>Service de Montage Video</h2>
+            <p>Un Montage Professionnel de Qualité.</p>
+            <p>Prix: 120$</p>
+            <a href="before.html" class="cta-button">Acheter</a>
+        </div>
+     
+    </div>
+
+    <footer>
+        DynamicDavStudio © 2023. Tous droits réservés.
+    </footer>
+
+    <script src="matrix-script.js"></script>
+</body>
+ <script src="matrix-script.js"></script> 
+  <link rel="icon" href="En-tête.png" type="image/x-icon">
+</html>

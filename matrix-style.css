@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Poppins:wght@700&display=swap');
+
+:root {
+    --primary: #11518d;
+    --secondary: #9c9c9c;
+    --secondary-color:  #2f00ff;
+    --body-font: 'Poppins', sans-serif; 
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, var(--background-color), var(--alternate-background));
+    color: #2d8de7;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffffb6;
+    transition: transform 0.3s;
+}
+
+body {
+    font-size: 16px;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+
+/* ... */
+
+/* Barre de navigation */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: #88c2f8;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.5rem 1rem;
+    border: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.nav-list a:hover {
+    background-color: var(--secondary-color);
+}
+
+nav a {
+    background-color: var(--primary-color);  /* couleur de fond par défaut */
+    color: white;  /* couleur du texte */
+}
+
+nav a:hover {
+    background-color: #007BFF;  /* couleur de fond au survol */
+    color: white;  /* couleur du texte au survol */
+}
+/* Menu Hamburger */
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.close {
+    display: none;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Ajoutez cette classe pour l'effet d'overlay */
+.overlay {
+    display: none; /* par défaut, il est caché */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fond noir avec 70% de transparence */
+    z-index: 999; /* Assurez-vous qu'il apparaît au-dessus des autres éléments */
+}
+
+.nav-list {
+    position: relative;
+    z-index: 1000; /* Assurez-vous que le menu est au-dessus de l'overlay */
+    /* autres styles existants... */
+}
+
+#close-menu {
+    position: absolute;
+    right: -30px; /* déplace le bouton à l'extérieur */
+    top: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 4320px) {
+    body {
+        font-size: 55px; /* taille de la police réduite */
+    }
+    #logo {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 400px;
+        height: 400px;
+        margin: 5px 0;
+    }
+    
+}
+
+@media screen and (max-width: 2160px) {
+    body {
+        font-size: 20px; /* taille de la police réduite */
+    }
+    #logo {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 300px;
+        height: 300px;
+        margin: 5px 0;
+    }
+    
+}
+
+@media screen and (max-width: 1366px) {
+    body {
+        font-size: 16px; /* taille de la police réduite */
+    }
+    #logo {
+
+        overflow: hidden;
+        width: 300px;
+        height: 100px;
+
+    }
+    
+}
+
+@media screen and (max-width: 1080px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -300px; /* La largeur du menu */
+        width: 300px; 
+        height: 100vh;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--primary-color);
+        box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s;
+    }
+
+    .nav-list.active {
+        right: 0;
+    }
+
+    .nav-list a {
+        margin: 1rem;
+    }
+
+    .close {
+        display: block;
+    }
+
+    body {
+        font-size: 12px; /* taille de la police réduite */
+    }
+}
+/* ... */
+/* Pour tablettes en mode portrait */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -300px; /* La largeur du menu */
+        width: 300px; 
+        height: 100vh;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--primary-color);
+        box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s;
+    }
+
+    .nav-list.active {
+        right: 0;
+    }
+
+    .nav-list a {
+        margin: 1rem;
+    }
+
+    .close {
+        display: block;
+    }
+    
+        body {
+            font-size: 12px;
+        }
+    
+    }
+
+/* Pour smartphones en mode paysage */
+@media (max-width: 576px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -300px; /* La largeur du menu */
+        width: 300px; 
+        height: 100vh;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--primary-color);
+        box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s;
+    }
+
+    .nav-list.active {
+        right: 0;
+    }
+
+    .nav-list a {
+        margin: 1rem;
+    }
+
+    .close {
+        display: block;
+    }
+        body {
+            font-size: 12px;
+        }
+    }
+
+/* Pour smartphones en mode portrait */
+@media (max-width: 480px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        right: -300px; /* La largeur du menu */
+        width: 300px; 
+        height: 100vh;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--primary-color);
+        box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s;
+    }
+
+    .nav-list.active {
+        right: 0;
+    }
+
+    .nav-list a {
+        margin: 1rem;
+    }
+
+    .close {
+        display: block;
+    }
+
+        body {
+            font-size: 10px;
+        }
+    
+}
+
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 0.75rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgb(230, 237, 241);
+    padding: 20px;
+    box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2.5rem 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: var(--footer-background);
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 3px solid var(--primary-color);
+}
+
+button {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #2d8de7;
+    color: rgb(255, 255, 255);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5c5757;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-header, .site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.site-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    background-color: var( #e62424;);
+    color: rgb(194, 172, 245);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.contact-form {
+    margin-top: 2rem;
+    background: var(--alternate-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px var(--shadow-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.form-group input[type="text"], 
+.form-group input[type="email"], 
+.form-group textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #fffbfb;
+    color: #312c2c;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.contact-details {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 2rem;
+}
+
+.contact-details li {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-details li i {
+    margin-right: 1rem;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width .3s;
+}
+
+a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, var(--background-color), var(--alternate-background));
+    mix-blend-mode: difference;
+}
+
+nav a {
+    position: relative;
+}
+
+nav a:hover {
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+/* Effets de transition douce */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Effets de gradient dynamiques */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, var(--background-color), var(--alternate-background));
+    mix-blend-mode: difference;
+}
+
+.button, nav a, .cta-button, .submit-button {
+    position: relative;
+}
+
+.button:hover, nav a:hover, .cta-button:hover, .submit-button:hover {
+    box-shadow: 5px 5px 15px rgb(0, 119, 255);
+}
+
+
+
+/* ... */
+
+/* Bouton de fermeture */
+.close {
+    display: none;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .close {
+        display: block;
+    }
+}
+
+/* ... */

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos - DynamicDavStudio</title>
+    <link rel="stylesheet" href="matrix-style.css">
+    <link rel="icon" href="En-tête.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px; /* Ajout d'un espace entre les boîtes de service */
+            padding: 20px;
+        }
+
+        .service-box {
+            flex: 1 1 calc(33% - 20px); /* Permet de prendre un tiers de l'espace disponible, en déduisant l'espacement */
+            box-shadow: 0 4px 8px rgba(0, 255, 127, 0.3);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            margin-top: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Logo.svg" alt="Description du logo" id="logo">
+        </a>
+    </div>
+    <link rel="icon" href="En-tête.png" type="image/x-icon">
+    
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="overlay"></div>
+
+    <nav class="nav-list">
+        <div class="close" id="close-menu">
+            <i class="fas fa-times"></i>
+        </div>
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="services2.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    
+
+</header>
+ 
+ <main>
+    <div class="container">
+        <div class="service-box">
+            <center>
+                <h2>A propos de nous</h2>
+            <a href="about1.html" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #ffffff; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+                 Voir
+            </a>
+        </center>
+        </div>
+
+        <div class="service-box">
+            <center>
+                <h2>Notre galerie</h2>
+                <a href="about copy.html" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #ffffff; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+                    Voir
+               </a>
+        </center>
+        </div>
+
+
+
+        <div class="service-box">
+            <center>
+                <h2>FAQ</h2>
+                <a href="faq.html" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #ffffff; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">
+                    Voir
+               </a>
+        
+     
+    </div>
+
+</main>
+
+    <footer>
+    dynamicDavStudio © 2023. Tous droits réservés
+    </footer>
+
+    <script src="matrix-script.js"></script>
+</body>
+ <script src="matrix-script.js"></script>  <link rel="icon" href="En-tête.png" type="image/x-icon">
+</html>
